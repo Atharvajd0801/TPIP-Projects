@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Finder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .form-label {
+            font-size: 1.2rem;
+        }
+        .card {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h2, h3 {
+            color: #495057;
+        }
+        ul {
+            margin-top: 10px;
+        }
+        ul li {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card p-4">
+            <h1 class="text-center text-primary mb-4">Destination Finder</h1>
+            <form onsubmit="event.preventDefault(); searchDestination();">
+                <div class="mb-3">
+                    <label for="destination" class="form-label">Enter Destination:</label>
+                    <input type="text" id="destination" class="form-control" placeholder="e.g., Mumbai, Pune" />
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Search</button>
+            </form>
+        </div>
+        <div id="destination-info" class="mt-4"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

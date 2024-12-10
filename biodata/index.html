@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Guidance Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Career Guidance Portal</h1>
+    <p>Your guide to a brighter future! Choose your career path with confidence.</p>
+  </header>
+
+  <nav>
+    <button onclick="navigate('home')">Home</button>
+    <button onclick="navigate('quiz')">Quiz</button>
+    <button onclick="navigate('after10')">After 10th</button>
+    <button onclick="navigate('after12')">After 12th</button>
+    <button onclick="navigate('afterBachelors')">After Bachelor's</button>
+    <button onclick="navigate('resources')">Resources</button>
+  </nav>
+
+  <main id="content">
+    <section id="home" class="active-section">
+      <h2>Welcome to the Career Guidance Portal!</h2>
+      <p>Select your educational stage or take a quiz to discover the best career path for you.</p>
+    </section>
+
+    <section id="quiz" class="hidden-section">
+      <h2>Career Quiz</h2>
+      <form id="quiz-form">
+        <p>1. What subjects do you enjoy the most?</p>
+        <select id="interest" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="science">Science</option>
+          <option value="commerce">Commerce</option>
+          <option value="arts">Arts</option>
+        </select>
+
+        <p>2. Do you prefer working with:</p>
+        <select id="work-type" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="technology">Technology</option>
+          <option value="people">People</option>
+          <option value="creativity">Creativity</option>
+        </select>
+
+        <p>3. What is your ultimate goal?</p>
+        <select id="goal" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="high-income">High income</option>
+          <option value="job-satisfaction">Job satisfaction</option>
+          <option value="making-impact">Making an impact</option>
+        </select>
+
+        <button type="button" onclick="showQuizResult()">Submit</button>
+      </form>
+      <div id="quiz-result" class="hidden-section"></div>
+    </section>
+
+    <section id="after10" class="hidden-section">
+      <h2>Career Options After 10th</h2>
+      <ul id="after10-careers"></ul>
+    </section>
+
+    <section id="after12" class="hidden-section">
+      <h2>Career Options After 12th</h2>
+      <ul id="after12-careers"></ul>
+    </section>
+
+    <section id="afterBachelors" class="hidden-section">
+      <h2>Career Options After Bachelor's</h2>
+      <ul id="afterBachelors-careers"></ul>
+    </section>
+
+    <section id="resources" class="hidden-section">
+      <h2>Resources</h2>
+      <p>Explore links to universities, courses, and certifications:</p>
+      <ul>
+        <li><a href="https://www.coursera.org" target="_blank">Coursera</a></li>
+        <li><a href="https://www.edx.org" target="_blank">edX</a></li>
+        <li><a href="https://www.udemy.com" target="_blank">Udemy</a></li>
+        <li><a href="https://www.geeksforgeeks.com" target="_blank">GeeksForGeeks</a></li>
+        <li><a href="https://www.wikipedia.com" target="_blank">Wikipedia</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Career Guidance Portal</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

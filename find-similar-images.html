@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Images</title>
+    <style>
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        table {
+            display: flex;
+            width: 200px;
+            height: 200px;
+        }
+        td {
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <h1>Find the Similar Images</h1>
+    <h1 id="win"></h1>
+    <table>
+        <tr>
+            <td>
+                <img id="1" src="https://4.imimg.com/data4/SW/AA/MY-33406727/tennis-ball-500x500.jpg">
+                <button onclick="checkMark(1)">Click Here</button>
+            </td>
+            <td>
+                <img id="2" src="https://4.imimg.com/data4/SW/AA/MY-33406727/tennis-ball-500x500.jpg">
+                <button onclick="checkMark(2)">Click Here</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img id="3" src="https://static.vecteezy.com/system/resources/thumbnails/016/283/763/small_2x/cricket-bat-cartoon-style-vector.jpg">
+                <button onclick="checkMark(3)">Click Here</button>
+            </td>
+            <td>
+                <img id="4" src="https://static.vecteezy.com/system/resources/thumbnails/016/283/763/small_2x/cricket-bat-cartoon-style-vector.jpg">
+                <button onclick="checkMark(4)">Click Here</button>
+            </td>
+        </tr>
+    </table>
+    </div>
+    <script>
+        let a, b;
+        let cnt = 0;
+       function checkMark(id) {
+        if(cnt===0) {
+            a = id;
+            document.getElementById(a).style.display = 'block';
+            cnt++;
+        }
+        else if(cnt===1) {
+            b = id;
+            document.getElementById(b).style.display = 'block';
+            if(document.getElementById(a).src === document.getElementById(b).src){
+                document.getElementById('win').innerHTML = 'You WIN!!!'
+            }
+            else {
+                setTimeout(() => {
+                        document.getElementById(a).style.display = 'none';
+                        document.getElementById(b).style.display = 'none';
+                }, 1000);
+                cnt = 0;
+            }
+        }
+
+        
+       }
+    </script>
+</body>
+</html>
